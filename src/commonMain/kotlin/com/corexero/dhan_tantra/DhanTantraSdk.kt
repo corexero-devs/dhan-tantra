@@ -1,4 +1,4 @@
-package com.example.dhan_tantra
+package com.corexero.dhan_tantra
 
 object DhanTantraSdk {
     fun init(){}

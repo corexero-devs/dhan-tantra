@@ -1,4 +1,4 @@
-package com.example.dhan_tantra
+package com.corexero.dhan_tantra
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
