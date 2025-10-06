@@ -61,6 +61,10 @@ kotlin {
             dependencies {
                 implementation(libs.kotlin.stdlib)
                 // Add KMP dependencies here
+                implementation(libs.purchases.core)
+                implementation(libs.purchases.either)     // Optional
+                implementation(libs.purchases.result)     // Optional
+
             }
         }
 
@@ -83,6 +87,12 @@ kotlin {
                 implementation(libs.androidx.runner)
                 implementation(libs.androidx.core)
                 implementation(libs.androidx.test.junit)
+            }
+        }
+
+        named { it.lowercase().startsWith("ios") }.configureEach {
+            languageSettings {
+                optIn("kotlinx.cinterop.ExperimentalForeignApi")
             }
         }
 
