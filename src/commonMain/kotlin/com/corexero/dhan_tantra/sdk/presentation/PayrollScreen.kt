@@ -1,23 +1,14 @@
 package com.corexero.dhan_tantra.sdk.presentation
-//
-//@OptIn(ExperimentalPreviewRevenueCatUIPurchasesAPI::class)
-//@Composable
-//fun PayrollScreen() {
-//    PaywallDialog(
-//        PaywallDialogOptions.Builder()
-//            .setRequiredEntitlementIdentifier(Constants.ENTITLEMENT_ID)
-//            .setListener(
-//                object : PaywallListener {
-//                    override fun onPurchaseCompleted(
-//                        customerInfo: CustomerInfo,
-//                        storeTransaction: StoreTransaction
-//                    ) {
-//                    }
-//
-//                    override fun onRestoreCompleted(customerInfo: CustomerInfo) {}
-//                }
-//            )
-//            .build()
-//    )
-//
-//}
+
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import com.revenuecat.purchases.kmp.ui.revenuecatui.Paywall
+import com.revenuecat.purchases.kmp.ui.revenuecatui.PaywallOptions
+
+@Composable
+fun PayrollScreen(onClose: () -> Unit) {
+    val options = remember {
+        PaywallOptions(dismissRequest = {onClose() })
+    }
+    Paywall(options)
+}
