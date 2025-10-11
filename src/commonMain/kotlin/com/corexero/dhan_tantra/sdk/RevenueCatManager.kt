@@ -8,9 +8,7 @@ object RevenueCatManager {
 
     fun initializeRevenueCat() {
         Purchases.logLevel = LogLevel.DEBUG
-        Purchases.configure(apiKey = "goog_wQQyhGeLVHDFNQgChIDpzNIyEMa") {
-            appUserId = "null"
-        }
+        Purchases.configure(apiKey = "goog_wQQyhGeLVHDFNQgChIDpzNIyEMa")
     }
 
     fun getSubscriptionStatus() {
@@ -31,7 +29,8 @@ object RevenueCatManager {
                 // An error occurred.
             },
             onSuccess = { customerInfo ->
-                //... check customerInfo to see if entitlement is now active
+                //... check customerInfo to see if
+            // erfaergentitlement is now active
             }
         )
     }
